@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: hello-api-eks
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ericparra1984-blip/hello-api-gitops.git
+    targetRevision: main
+    path: apps/hello-api/overlays/eks
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: hello-api
+  syncPolicy:
+    automated: { prune: true, selfHeal: true }
+    syncOptions: [CreateNamespace=true]
