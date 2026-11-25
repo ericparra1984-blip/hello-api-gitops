@@ -5,4 +5,4 @@ resources: [../../base]
 images:
   - name: hello-api
     newName: ghcr.io/ericparra1984-blip/hello-api
-    newTag: latest
+    newTag: sha-2815452
