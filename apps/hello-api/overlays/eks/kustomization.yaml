@@ -5,7 +5,7 @@ resources: [../../base]
 images:
   - name: hello-api
     newName: ghcr.io/ericparra1984-blip/hello-api
-    newTag: sha-2815452
+    newTag: sha-b4a20fa
 patches:
   - target: {kind: Service, name: hello-api}
     patch: |-
